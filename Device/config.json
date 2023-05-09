@@ -1,0 +1,20 @@
+{
+    "TestCase": {
+        "BatteryTest": "True",
+        "BatteryTestRepeat": "1",
+        "UtilityTest": "True",
+        "UtilityTestRepeat": "1",
+        "ApkTest": "False",
+        "ApkTestRepeat": "1",
+        "ApkADBTest": "True",
+        "ApkADBTestRepeat": "1",
+        "DdtTest": "False",
+        "DdtTestRepeat": "1",
+        "DeviceConfigTest": "False",
+        "DeviceConfigTestRepeat": "1"
+    },
+    "Global": {
+        "ReportingName": "RMG_Reporting",
+        "OverallReapeating": "1"
+    }
+}
