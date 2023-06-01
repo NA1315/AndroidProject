@@ -5,12 +5,7 @@ Documentation   Run the DDT application and get diagnostic results/data/report  
 Resource       ../resource.robot
 
 *** Variables ***
-${URL}    http://127.0.0.1:4723/wd/hub
-${platformName}  android
-${version}    10
-${id}       21208522513161
-${name}     Device-B
-${automate}  Uiautomator2
+
 *** Test Cases ***
 Open DDT Application
     [Documentation]    Run the DDT application and get diagnostic results/data/report

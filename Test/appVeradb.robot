@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Capture application version from ${id}
+Documentation   Capture application version from ${id1}
 Library     AppiumLibrary
 Library     OperatingSystem
 Library     ExcelLibrary
@@ -8,7 +8,7 @@ Library     Process
 Resource    ../resource.robot
 
 *** Variables ***
-${path}       /Users/Testing_Lab/PycharmProjects/AndroidProject/Test/appversion_A.xlsx
+${path}       ${EXECDIR}/appversion_A.xlsx
 
 
 *** Test Cases ***
@@ -28,61 +28,61 @@ Capture all app version
     ...  appActivity=com.android.settings.homepage.SettingsHomepageActivity
     ...  automationName=Uiautomator2
     sleep   2s
-    ${em}    Run   adb shell dumpsys package com.zebra.emscript | findstr versionName
+    ${em}    Run   adb -s ${id1} shell dumpsys package com.zebra.emscript | findstr versionName
     write excel cell     2    2    ${em}
     save excel document    ${path}
-    ${phl}    Run   adb shell dumpsys package com.zebra.emscript.ph_plugin | findstr versionName
+    ${phl}    Run   adb -s ${id1} shell dumpsys package com.zebra.emscript.ph_plugin | findstr versionName
     write excel cell     3    2    ${phl}
     save excel document    ${path}
-    ${in}    Run   adb shell dumpsys package com.royalmail.indoor | findstr versionName
+    ${in}    Run   adb -s ${id1} shell dumpsys package com.royalmail.indoor | findstr versionName
     write excel cell     4    2    ${in}
     save excel document    ${path}
-    ${inf}    Run   adb shell dumpsys package com.royalmail.inflight | findstr versionName
+    ${inf}    Run   adb -s ${id1} shell dumpsys package com.royalmail.inflight | findstr versionName
     write excel cell     5    2    ${inf}
     save excel document    ${path}
-    ${m}    Run   adb shell dumpsys package com.royalmail.memo | findstr versionName
+    ${m}    Run   adb -s ${id1} shell dumpsys package com.royalmail.memo | findstr versionName
     write excel cell     6    2    ${m}
     save excel document    ${path}
-    ${my}    Run   adb shell dumpsys package com.royalmail.mydashboard | findstr versionName
+    ${my}    Run   adb -s ${id1} shell dumpsys package com.royalmail.mydashboard | findstr versionName
     write excel cell     7    2    ${my}
     save excel document    ${path}
-    ${ex}    Run   adb shell dumpsys package com.royalmail.externallink | findstr versionName
+    ${ex}    Run   adb -s ${id1} shell dumpsys package com.royalmail.externallink | findstr versionName
     write excel cell     8    2    ${ex}
     save excel document    ${path}
-    ${nv}    Run   adb shell dumpsys package com.royalmail.navigation | findstr versionName
+    ${nv}    Run   adb -s ${id1} shell dumpsys package com.royalmail.navigation | findstr versionName
     write excel cell     9    2    ${nv}
     save excel document    ${path}
-    ${oa}    Run   adb shell dumpsys package com.royalmail.oa | findstr versionName
+    ${oa}    Run   adb -s ${id1} shell dumpsys package com.royalmail.oa | findstr versionName
     write excel cell     10    2    ${oa}
     save excel document    ${path}
-    ${ss}    Run   adb shell dumpsys package com.royalmail.sso | findstr versionName
+    ${ss}    Run   adb -s ${id1} shell dumpsys package com.royalmail.sso | findstr versionName
     write excel cell     11    2    ${ss}
     save excel document    ${path}
-    ${ph}    Run   adb shell dumpsys package com.royalmail.phonebook | findstr versionName
+    ${ph}    Run   adb -s ${id1} shell dumpsys package com.royalmail.phonebook | findstr versionName
     write excel cell     12    2    ${ph}
     save excel document    ${path}
-    ${ou}    Run   adb shell dumpsys package com.royalmail.outdoor | findstr versionName
+    ${ou}    Run   adb -s ${id1} shell dumpsys package com.royalmail.outdoor | findstr versionName
     write excel cell     13    2    ${ou}
     save excel document    ${path}
-    ${wa}    Run   adb shell dumpsys package com.royalmail.watchandwin | findstr versionName
+    ${wa}    Run   adb -s ${id1} shell dumpsys package com.royalmail.watchandwin | findstr versionName
     write excel cell     14    2    ${wa}
     save excel document    ${path}
-    ${ro}    Run   adb shell dumpsys package com.royalmail.ron | findstr versionName
+    ${ro}    Run   adb -s ${id1} shell dumpsys package com.royalmail.ron | findstr versionName
     write excel cell     15    2    ${ro}
     save excel document    ${path}
-    ${ho}    Run   adb shell dumpsys package com.royalmail.hourscapture | findstr versionName
+    ${ho}    Run   adb -s ${id1} shell dumpsys package com.royalmail.hourscapture | findstr versionName
     write excel cell     16    2    ${ho}
     save excel document    ${path}
-    ${tm}    Run   adb shell dumpsys package com.royalmail.tma | findstr versionName
+    ${tm}    Run   adb -s ${id1} shell dumpsys package com.royalmail.tma | findstr versionName
     write excel cell     17    2    ${tm}
     save excel document    ${path}
-    ${ve}    Run   adb shell dumpsys package com.royalmail.vehiclecheck | findstr versionName
+    ${ve}    Run   adb -s ${id1} shell dumpsys package com.royalmail.vehiclecheck | findstr versionName
     write excel cell     18    2    ${ve}
     save excel document    ${path}
-    ${da}    Run   adb shell dumpsys package com.symbol.dataanalytics | findstr versionName
+    ${da}    Run   adb -s ${id1} shell dumpsys package com.symbol.dataanalytics | findstr versionName
     write excel cell     19    2    ${da}
     save excel document    ${path}
-    ${dc}    Run   adb shell dumpsys package com.symbol.dataanalytics.dca | findstr versionName
+    ${dc}    Run   adb -s ${id1} shell dumpsys package com.symbol.dataanalytics.dca | findstr versionName
     write excel cell     20    2    ${dc}
     save excel document    ${path}
     press keycode   3

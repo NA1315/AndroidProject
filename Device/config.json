@@ -2,19 +2,29 @@
     "TestCase": {
         "BatteryTest": "True",
         "BatteryTestRepeat": "1",
-        "UtilityTest": "True",
+        "UtilityTest": "False",
         "UtilityTestRepeat": "1",
-        "ApkTest": "False",
+        "ApkTest": "True",
         "ApkTestRepeat": "1",
         "ApkADBTest": "True",
         "ApkADBTestRepeat": "1",
         "DdtTest": "False",
         "DdtTestRepeat": "1",
         "DeviceConfigTest": "False",
-        "DeviceConfigTestRepeat": "1"
+        "DeviceConfigTestRepeat": "1",
+        "FTTest": "False",
+        "FTTestRepeat": "1"
     },
     "Global": {
         "ReportingName": "RMG_Reporting",
-        "OverallReapeating": "1"
+        "OverallRepeating": "1",
+        "batteryBatFileLocation": "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/battery.bat",
+        "appversionBatFileLocation": "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/appVersion.bat",
+        "deviceConfigBatFileLocation": "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/deviceConfig.bat",
+        "ddtBatFileLocation": "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/ddt.bat",
+        "utilityFileLocation": "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/utility.bat",
+        "updateExcelFileLocation": "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/reference_file.bat",
+        "appVeradbBatFileLocation": "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/appVeradb.bat",
+        "ftBatFileLocation" : "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/ft.bat"
     }
 }

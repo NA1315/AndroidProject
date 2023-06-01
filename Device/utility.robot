@@ -8,7 +8,7 @@ Library    ExcelLibrary
 Resource       ../resource.robot
 
 *** Variables ***
-${path}      /Users/Testing_Lab/PycharmProjects/AndroidProject/Device/reference.xlsx
+${path}      ${EXECDIR}/reference.xlsx
 
 
 *** Test Cases ***

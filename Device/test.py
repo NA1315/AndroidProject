@@ -1,12 +1,13 @@
 import subprocess
 
-batteryBatFileLocation = r"C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/battery.bat"
-appversionBatFileLocation = r"C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/appVersion.bat"
-deviceConfigBatFileLocation = r"C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/deviceConfig.bat"
-ddtBatFileLocation = r"C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/ddt.bat"
-utilityFileLocation = r"C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/utility.bat"
-updateExcelFileLocation = r"C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/reference_file.bat"
-appVeradbBatFileLocation = r"C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/appVeradb.bat"
+batteryBatFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/battery.bat"
+appversionBatFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/appVersion.bat"
+deviceConfigBatFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/deviceConfig.bat"
+ddtBatFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/ddt.bat"
+utilityFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/utility.bat"
+updateExcelFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/reference_file.bat"
+appVeradbBatFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/appVeradb.bat"
+ftBatFileLocation = "C:/Users/Testing_Lab/PycharmProjects/AndroidProject/Device_B_Bat/ft.bat"
 
 def switch(number):
     dicts = {
@@ -16,7 +17,8 @@ def switch(number):
         '4': deviceConfigBatFileLocation,
         '5': ddtBatFileLocation,
         '6': utilityFileLocation,
-        '7': updateExcelFileLocation
+        '7': ftBatFileLocation,
+        '8': updateExcelFileLocation
     }
     return dicts.get(number, 'Consonant')
 
@@ -28,7 +30,8 @@ press 3 for App Version ADB
 press 4 for Device Config
 press 5 for DDT
 press 6 for Utility
-press 7 for Reference File
+press 7 for FT
+press 8 for Reference File
 """
 print(printText)
 

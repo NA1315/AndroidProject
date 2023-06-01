@@ -5,7 +5,7 @@ Library     ExcelLibrary
 Resource       ../resource.robot
 
 *** Variables ***
-${path}      /Users/Testing_Lab/PycharmProjects/AndroidProject/Device/deviceConfig_A.xlsx
+${path}      ${EXECDIR}/deviceConfig_A.xlsx
 
 *** Test Cases ***
 Open Setting Application

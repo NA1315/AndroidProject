@@ -6,12 +6,12 @@ Library     ExcelLibrary
 Resource    ../resource.robot
 
 *** Variables ***
-${path}      /Users/Testing_Lab/PycharmProjects/AndroidProject/Device/appversion.xlsx
+${path}     ${EXECDIR}/appversion.xlsx
 
 
 *** Test Cases ***
 Open APKinfo Application
-    open application    http://127.0.0.1:4723/wd/hub     platformName=android    platformVersion=10  udid=${id}  systemPort=8201  deviceName=Test  app=C:/analyzer.apk  appPackage=sk.styk.martin.apkanalyzer  appActivity=sk.styk.martin.apkanalyzer.ui.main.MainActivity   automationName=Uiautomator2
+    open application    http://127.0.0.1:4723/wd/hub     platformName=android    platformVersion=10  udid=${id}  systemPort=8201  deviceName=Test  app=${EXECDIR}/analyzer.apk  appPackage=sk.styk.martin.apkanalyzer  appActivity=sk.styk.martin.apkanalyzer.ui.main.MainActivity   automationName=Uiautomator2
 #    open application    http://127.0.0.1:4723/wd/hub     platformName=android    platformVersion=10  udid=10.35.207.32:5555  systemPort=8202  deviceName=TC57X  app=C:/apk-analyzer.apk    appPackage=sk.styk.martin.apkanalyzer  appActivity=sk.styk.martin.apkanalyzer.ui.main.MainActivity   automationName=Uiautomator2
     ${document}=   Create Excel Document    ${path}
     Should Be Equal As Strings    ${path}    ${document}

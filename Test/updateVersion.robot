@@ -6,7 +6,7 @@ Library    ExcelLibrary
 Resource       ../resource.robot
 
 *** Variables ***
-${path}      /Users/Testing_Lab/PycharmProjects/AndroidProject/Test/result_A.xlsx
+${path}      ${EXECDIR}/result_A.xlsx
 
 *** Test Cases ***
 Open Excel File
