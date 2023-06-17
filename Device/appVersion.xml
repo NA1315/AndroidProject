@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230525 16:11:49.924" rpa="false" schemaversion="3">
+<suite id="s1" name="updateVersion" source="C:\Users\Testing_Lab\PycharmProjects\AndroidProject\Device\updateVersion.robot">
+<test id="s1-t1" name="Open Excel File" line="11">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230525 16:11:52.279" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230525 16:11:50.274" endtime="20230525 16:11:52.279"/>
+</kw>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>${path}</arg>
+<arg>doc_id=docid1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20230525 16:11:52.280" endtime="20230525 16:11:52.288"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:50.273" endtime="20230525 16:11:52.290"/>
+</test>
+<test id="s1-t2" name="Check Status of Indoor APK" line="15">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd}</var>
+<arg>2</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.292" level="INFO">${rd} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.291" endtime="20230525 16:11:52.292"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.293" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.293" endtime="20230525 16:11:52.293"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.292" endtime="20230525 16:11:52.293"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.292" endtime="20230525 16:11:52.293"/>
+</kw>
+<doc>Check Indoor application and validate correct version</doc>
+<tag>DA_07</tag>
+<status status="PASS" starttime="20230525 16:11:52.291" endtime="20230525 16:11:52.294">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t3" name="Check Status of Inflight APK" line="22">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd1}</var>
+<arg>3</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.297" level="INFO">${rd1} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.296" endtime="20230525 16:11:52.297"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd1}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.297" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.297" endtime="20230525 16:11:52.297"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.297" endtime="20230525 16:11:52.299"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.297" endtime="20230525 16:11:52.299"/>
+</kw>
+<doc>Check Inflight application and validate correct version</doc>
+<tag>DA_08</tag>
+<status status="PASS" starttime="20230525 16:11:52.296" endtime="20230525 16:11:52.299">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t4" name="Check Status of Memos APK" line="29">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd2}</var>
+<arg>4</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.302" level="INFO">${rd2} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.302" endtime="20230525 16:11:52.302"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd2}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.303" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.303" endtime="20230525 16:11:52.303"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.303" endtime="20230525 16:11:52.304"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.303" endtime="20230525 16:11:52.304"/>
+</kw>
+<doc>Check Memos application and validate correct version</doc>
+<tag>DA_05</tag>
+<status status="PASS" starttime="20230525 16:11:52.301" endtime="20230525 16:11:52.304">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t5" name="Check Status of My Dashboard APK" line="36">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd2}</var>
+<arg>5</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.307" level="INFO">${rd2} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.307" endtime="20230525 16:11:52.307"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd2}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.308" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.308" endtime="20230525 16:11:52.308"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.308" endtime="20230525 16:11:52.309"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.308" endtime="20230525 16:11:52.309"/>
+</kw>
+<doc>Check My Dashboard application and validate correct version</doc>
+<tag>DA_06</tag>
+<status status="PASS" starttime="20230525 16:11:52.306" endtime="20230525 16:11:52.309">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t6" name="Check Status of Mylinks APK" line="43">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd3}</var>
+<arg>6</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.311" level="INFO">${rd3} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.311" endtime="20230525 16:11:52.311"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd3}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.312" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.312" endtime="20230525 16:11:52.312"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.312" endtime="20230525 16:11:52.312"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.312" endtime="20230525 16:11:52.312"/>
+</kw>
+<doc>Check Mylinks application and validate correct version</doc>
+<tag>DA_10</tag>
+<status status="PASS" starttime="20230525 16:11:52.311" endtime="20230525 16:11:52.313">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t7" name="Check Status of Navigation APK" line="49">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd4}</var>
+<arg>7</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.315" level="INFO">${rd4} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.315" endtime="20230525 16:11:52.315"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd4}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.316" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.316" endtime="20230525 16:11:52.316"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.316" endtime="20230525 16:11:52.317"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.316" endtime="20230525 16:11:52.317"/>
+</kw>
+<doc>Check Navigation application and validate correct version</doc>
+<tag>DA_02</tag>
+<status status="PASS" starttime="20230525 16:11:52.315" endtime="20230525 16:11:52.317">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t8" name="Check Status of OutDoor Actuals APK" line="55">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd5}</var>
+<arg>8</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.320" level="INFO">${rd5} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.320" endtime="20230525 16:11:52.320"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd5}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.321" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.321" endtime="20230525 16:11:52.321"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.321" endtime="20230525 16:11:52.321"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.320" endtime="20230525 16:11:52.321"/>
+</kw>
+<doc>Check Outdoor Actuals application and validate correct version</doc>
+<tag>DA_11</tag>
+<status status="PASS" starttime="20230525 16:11:52.319" endtime="20230525 16:11:52.322">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t9" name="Check Status of PDA Frontline APK" line="61">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd6}</var>
+<arg>9</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.323" level="INFO">${rd6} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.323" endtime="20230525 16:11:52.323"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd6}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.324" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.324" endtime="20230525 16:11:52.324"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.324" endtime="20230525 16:11:52.324"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.324" endtime="20230525 16:11:52.324"/>
+</kw>
+<doc>Check PDA Frontline application and validate correct version</doc>
+<tag>DA_12</tag>
+<status status="PASS" starttime="20230525 16:11:52.323" endtime="20230525 16:11:52.324">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t10" name="Check Status of Phonebook APK" line="67">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd7}</var>
+<arg>10</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.325" level="INFO">${rd7} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.325" endtime="20230525 16:11:52.325"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd7}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.326" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.326" endtime="20230525 16:11:52.326"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.326" endtime="20230525 16:11:52.326"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.325" endtime="20230525 16:11:52.326"/>
+</kw>
+<doc>Check Phonebook application and validate correct version</doc>
+<tag>DA_13</tag>
+<status status="PASS" starttime="20230525 16:11:52.325" endtime="20230525 16:11:52.327">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t11" name="Check Status of RM Outdoor APK" line="73">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd8}</var>
+<arg>11</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.328" level="INFO">${rd8} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.328" endtime="20230525 16:11:52.328"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd8}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.329" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.329" endtime="20230525 16:11:52.329"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.328" endtime="20230525 16:11:52.329"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.328" endtime="20230525 16:11:52.329"/>
+</kw>
+<doc>Check RM Outdoor application and validate correct version</doc>
+<tag>DA_14</tag>
+<status status="PASS" starttime="20230525 16:11:52.328" endtime="20230525 16:11:52.330">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t12" name="Check Status of RM WatchAndWin APK" line="79">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd9}</var>
+<arg>12</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.331" level="INFO">${rd9} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.331" endtime="20230525 16:11:52.331"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd9}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.332" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.332" endtime="20230525 16:11:52.332"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.332" endtime="20230525 16:11:52.332"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.332" endtime="20230525 16:11:52.332"/>
+</kw>
+<doc>Check RM Watch And Win application and validate correct version</doc>
+<tag>DA_15</tag>
+<status status="PASS" starttime="20230525 16:11:52.331" endtime="20230525 16:11:52.333">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t13" name="Check Status of RO+N APK" line="85">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd10}</var>
+<arg>13</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.334" level="INFO">${rd10} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.334" endtime="20230525 16:11:52.334"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd10}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.335" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.335" endtime="20230525 16:11:52.336"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.335" endtime="20230525 16:11:52.336"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.335" endtime="20230525 16:11:52.336"/>
+</kw>
+<doc>Check RO+N application and validate correct version</doc>
+<tag>DA_16</tag>
+<status status="PASS" starttime="20230525 16:11:52.334" endtime="20230525 16:11:52.336">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t14" name="Check Status of Scan In Scan Out APK" line="91">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd11}</var>
+<arg>14</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.338" level="INFO">${rd11} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.338" endtime="20230525 16:11:52.338"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd11}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.338" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.338" endtime="20230525 16:11:52.339"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.338" endtime="20230525 16:11:52.339"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.338" endtime="20230525 16:11:52.339"/>
+</kw>
+<doc>Check SSO application and validate correct version</doc>
+<tag>DA_17</tag>
+<status status="PASS" starttime="20230525 16:11:52.337" endtime="20230525 16:11:52.339">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t15" name="Check Status of Traffic Recording APK" line="97">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd12}</var>
+<arg>15</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.340" level="INFO">${rd12} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.340" endtime="20230525 16:11:52.340"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd12}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.341" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.341" endtime="20230525 16:11:52.342"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.341" endtime="20230525 16:11:52.342"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.341" endtime="20230525 16:11:52.342"/>
+</kw>
+<doc>Check Traffic Recording application and validate correct version</doc>
+<tag>DA_18</tag>
+<status status="PASS" starttime="20230525 16:11:52.340" endtime="20230525 16:11:52.343">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t16" name="Check Status of Vehicle Check APK" line="103">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd13}</var>
+<arg>16</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.345" level="INFO">${rd13} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.345" endtime="20230525 16:11:52.345"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd13}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.346" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.346" endtime="20230525 16:11:52.346"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.346" endtime="20230525 16:11:52.347"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.345" endtime="20230525 16:11:52.347"/>
+</kw>
+<doc>Check Vehicle Check application and validate correct version</doc>
+<tag>DA_04</tag>
+<status status="PASS" starttime="20230525 16:11:52.344" endtime="20230525 16:11:52.347">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t17" name="Check Status of emScript APK" line="109">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd14}</var>
+<arg>17</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.348" level="INFO">${rd14} = Not Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.348" endtime="20230525 16:11:52.348"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd14}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pass Test">
+<kw name="Pass Execution" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<msg timestamp="20230525 16:11:52.349" level="INFO" html="true">Execution passed with message:
+&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</msg>
+<status status="PASS" starttime="20230525 16:11:52.349" endtime="20230525 16:11:52.349"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.349" endtime="20230525 16:11:52.349"/>
+</kw>
+<status status="PASS" starttime="20230525 16:11:52.349" endtime="20230525 16:11:52.349"/>
+</kw>
+<doc>Check emScript application and validate correct version</doc>
+<tag>DA_04</tag>
+<status status="PASS" starttime="20230525 16:11:52.348" endtime="20230525 16:11:52.350">*HTML*&lt;h4 style="color:Green;"&gt;Same as reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t18" name="Check Status of PH_Plugin APK" line="115">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd15}</var>
+<arg>18</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.351" level="INFO">${rd15} = Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.351" endtime="20230525 16:11:52.351"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd15}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Fail Test">
+<kw name="Fail" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230525 16:11:52.351" level="FAIL" html="true">&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</msg>
+<status status="FAIL" starttime="20230525 16:11:52.351" endtime="20230525 16:11:52.351"/>
+</kw>
+<status status="FAIL" starttime="20230525 16:11:52.351" endtime="20230525 16:11:52.352"/>
+</kw>
+<status status="FAIL" starttime="20230525 16:11:52.351" endtime="20230525 16:11:52.352"/>
+</kw>
+<doc>Check PH_Plugin application and validate correct version</doc>
+<tag>DA_04</tag>
+<status status="FAIL" starttime="20230525 16:11:52.350" endtime="20230525 16:11:52.352">*HTML*&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t19" name="Check Status of Zebra Data Service APK" line="121">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd16}</var>
+<arg>19</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.353" level="INFO">${rd16} = Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.353" endtime="20230525 16:11:52.353"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd16}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Fail Test">
+<kw name="Fail" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230525 16:11:52.354" level="FAIL" html="true">&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</msg>
+<status status="FAIL" starttime="20230525 16:11:52.354" endtime="20230525 16:11:52.354"/>
+</kw>
+<status status="FAIL" starttime="20230525 16:11:52.354" endtime="20230525 16:11:52.354"/>
+</kw>
+<status status="FAIL" starttime="20230525 16:11:52.353" endtime="20230525 16:11:52.354"/>
+</kw>
+<doc>Check Zebra Data Service application and validate correct version</doc>
+<tag>DA_04</tag>
+<status status="FAIL" starttime="20230525 16:11:52.353" endtime="20230525 16:11:52.355">*HTML*&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</status>
+</test>
+<test id="s1-t20" name="Check Status of Zebra Data Service Plugin APK" line="127">
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${rd17}</var>
+<arg>20</arg>
+<arg>4</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230525 16:11:52.356" level="INFO">${rd17} = Changed</msg>
+<status status="PASS" starttime="20230525 16:11:52.356" endtime="20230525 16:11:52.356"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${rd17}' == 'Not Changed'</arg>
+<arg>Pass Test</arg>
+<arg>ELSE</arg>
+<arg>Fail Test</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Fail Test">
+<kw name="Fail" library="BuiltIn">
+<arg>*HTML*&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20230525 16:11:52.357" level="FAIL" html="true">&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</msg>
+<status status="FAIL" starttime="20230525 16:11:52.356" endtime="20230525 16:11:52.357"/>
+</kw>
+<status status="FAIL" starttime="20230525 16:11:52.356" endtime="20230525 16:11:52.357"/>
+</kw>
+<status status="FAIL" starttime="20230525 16:11:52.356" endtime="20230525 16:11:52.357"/>
+</kw>
+<kw name="Close All Excel Documents" library="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="NOT RUN" starttime="20230525 16:11:52.358" endtime="20230525 16:11:52.358"/>
+</kw>
+<doc>Check Zebra Data Service Plugin application and validate correct version</doc>
+<tag>DA_04</tag>
+<status status="FAIL" starttime="20230525 16:11:52.355" endtime="20230525 16:11:52.358">*HTML*&lt;h4 style="color:Red;"&gt; Mismatch with reference file&lt;/h4&gt;</status>
+</test>
+<doc>Obtain version and refernce version compare then generate status For 21208522513161</doc>
+<status status="FAIL" starttime="20230525 16:11:49.925" endtime="20230525 16:11:52.359"/>
+</suite>
+<statistics>
+<total>
+<stat pass="17" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">DA_02</stat>
+<stat pass="2" fail="3" skip="0">DA_04</stat>
+<stat pass="1" fail="0" skip="0">DA_05</stat>
+<stat pass="1" fail="0" skip="0">DA_06</stat>
+<stat pass="1" fail="0" skip="0">DA_07</stat>
+<stat pass="1" fail="0" skip="0">DA_08</stat>
+<stat pass="1" fail="0" skip="0">DA_10</stat>
+<stat pass="1" fail="0" skip="0">DA_11</stat>
+<stat pass="1" fail="0" skip="0">DA_12</stat>
+<stat pass="1" fail="0" skip="0">DA_13</stat>
+<stat pass="1" fail="0" skip="0">DA_14</stat>
+<stat pass="1" fail="0" skip="0">DA_15</stat>
+<stat pass="1" fail="0" skip="0">DA_16</stat>
+<stat pass="1" fail="0" skip="0">DA_17</stat>
+<stat pass="1" fail="0" skip="0">DA_18</stat>
+</tag>
+<suite>
+<stat pass="17" fail="3" skip="0" id="s1" name="updateVersion">updateVersion</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

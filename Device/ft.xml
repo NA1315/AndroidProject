@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230601 10:41:22.456" rpa="false" schemaversion="3">
+<suite id="s1" name="check FT" source="C:\Users\Testing_Lab\PycharmProjects\AndroidProject\Device\check_FT.robot">
+<test id="s1-t1" name="Open_Application" line="13">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>platformName=android</arg>
+<arg>platformVersion=10</arg>
+<arg>udid=${id}</arg>
+<arg>deviceName=TC57X</arg>
+<arg>appPackage=com.android.settings</arg>
+<arg>appActivity=com.android.settings.homepage.SettingsHomepageActivity</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230601 10:41:22.617" endtime="20230601 10:41:30.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230601 10:41:31.892" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230601 10:41:30.887" endtime="20230601 10:41:31.892"/>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<var>${output}</var>
+<arg>adb -s ${id} shell ls /sdcard/SWD-FT</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<msg timestamp="20230601 10:41:31.908" level="INFO">Running command 'adb -s 21208522513161 shell ls /sdcard/SWD-FT 2&gt;&amp;1'.</msg>
+<msg timestamp="20230601 10:41:31.993" level="INFO">${output} = HTTPServer-release-0.1.137.apk
+SmartFileSync-0.316.apk
+com.royalmail.indoor.apk
+com.royalmail.inflight.apk
+com.royalmail.outdoor.apk
+com.royalmail.sso.apk
+crc.ini
+ph_lib-Perpetual-release-0.1.564.apk
+...</msg>
+<status status="PASS" starttime="20230601 10:41:31.893" endtime="20230601 10:41:31.993"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230601 10:41:31.993" level="INFO">HTTPServer-release-0.1.137.apk
+SmartFileSync-0.316.apk
+com.royalmail.indoor.apk
+com.royalmail.inflight.apk
+com.royalmail.outdoor.apk
+com.royalmail.sso.apk
+crc.ini
+ph_lib-Perpetual-release-0.1.564.apk
+swd-ft.emd
+swd-ft.ini</msg>
+<status status="PASS" starttime="20230601 10:41:31.993" endtime="20230601 10:41:31.994"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>3</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20230601 10:41:31.994" endtime="20230601 10:41:32.048"/>
+</kw>
+<status status="PASS" starttime="20230601 10:41:22.616" endtime="20230601 10:41:32.048"/>
+</test>
+<doc>Check File transfer from 21208522513161</doc>
+<status status="PASS" starttime="20230601 10:41:22.458" endtime="20230601 10:41:32.049"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="check FT">check FT</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

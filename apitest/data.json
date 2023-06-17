@@ -1,0 +1,26 @@
+{
+  "Success":
+  {
+    "groupName": "Nayeem_Test",
+    "onestop": "FT_copy",
+    "rb": "_process_SWD-RB_PROD_CR003294",
+    "ins": "_process_SWD-INS_PROD_CR003294",
+    "ft": "_process_SWD-FT_PROD_CR003294"
+  },
+  "custom":
+  {
+    "mspi": "MSPI",
+    "ft": "SWD-FT",
+    "ins": "SWD-INS"
+  },
+  "config":
+  {
+    "Server" : "http://zebrams000.eu.suremdm.io",
+    "ApiKey" : "13967834-72B0-42F0-8F8C-66A69BE028D8",
+    "User"  : "nayeem.ahmad@zebra.com_21070007",
+    "Password" : "Payza12345@"
+  },
+  "SearchValue": "nayeem123",
+  "deviceID" : "21208522513158"
+
+}
